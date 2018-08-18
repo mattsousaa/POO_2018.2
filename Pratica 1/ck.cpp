@@ -122,12 +122,6 @@ int main(){
 
         s2.erase(remove(s2.begin(),s2.end(),' '),s2.end()); // Remove o espaço do número
 
-        /*
-        cout << s1 << endl;
-
-        cout << s2 << endl;
-		*/
-
         number = atoi(s2.c_str());	// Converte s2 em inteiro
 
         if(s1 == "show"){
