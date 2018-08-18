@@ -99,7 +99,6 @@ class Carro{
 int main(){
 
     string getName;
-    int perc;
     int number;
     float comb;
 
