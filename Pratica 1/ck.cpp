@@ -109,8 +109,6 @@ int main(){
         getline(cin, getName);
         cout << endl;
 
-        //cout << getName;
-
         stringstream ss(getName);
 
         string s1, s2;	// Duas strings para string e numero
@@ -133,7 +131,6 @@ int main(){
             c1.desembarcar();
 
         } else if(s1 == "fuel"){
-            //cin >> comb;
             //cout << "Posso abastecer" << endl;
 
             comb = atof(s2.c_str()); // string para float
@@ -141,7 +138,6 @@ int main(){
             c1.abastecer(comb);
 
         } else if(s1 == "drive"){
-            //cin >> perc;
             //cout << "Posso andar" << endl;
 
             c1.andar(number);
