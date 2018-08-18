@@ -2,7 +2,6 @@
 #include <string.h>
 #include <sstream>
 #include <algorithm>
-#include <cstdio>
 
 using namespace std;
 
@@ -11,7 +10,7 @@ class Carro{
     private:
     
     int pass;
-    int gas;
+    float gas;
     int km;
 
     public:
@@ -26,24 +25,24 @@ class Carro{
     	return this->pass;
     }
 
-    void setPass(int p){
-    	this->pass = p;
+    void setPass(int pass){
+    	this->pass = pass;
     }
 
-    int getGas(){
+    float getGas(){
     	return this->gas;
     }
 
-    void setGas(int g){
-    	this->gas = g;
+    void setGas(float gas){
+    	this->gas = gas;
     }
 
     int getKm(){
     	return this->km;
     }
 
-    void setKm(int k){
-    	this->km = k;
+    void setKm(int km){
+    	this->km = km;
     }
 
     
@@ -70,14 +69,16 @@ class Carro{
         }
     }
 
-    void abastecer(int litros){
+    void abastecer(float litros){
 
         this->setGas(0);
 
         if(litros >= 0 && litros <= 10){
             this->gas += litros;
+            cout << "done" << endl;
         } else{
             this->setGas(10);
+            cout << "done" << endl;
         }
     }
 
@@ -100,6 +101,7 @@ int main(){
     string getName;
     int perc;
     int number;
+    float comb;
 
     Carro c1(0,0,0);
 
@@ -141,7 +143,9 @@ int main(){
             //cin >> comb;
             //cout << "Posso abastecer" << endl;
 
-            c1.abastecer(number);
+            comb = atof(s2.c_str()); // string para float
+
+            c1.abastecer(comb);
 
         } else if(s1 == "drive"){
             //cin >> perc;
