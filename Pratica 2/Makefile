@@ -1,34 +1,58 @@
-#Makefile para POO
+# Pratica 2 de POO
+PROJ_NAME=app
 
-all:
-	g++ -std=c++14 -c passageiro.cpp
-	g++ -std=c++14 -c topic.cpp 
-	g++ -std=c++14 -c aqui.cpp
-	g++ passageiro.o topic.o aqui.o -o app
+# .cpp files
+C_SOURCE=$(wildcard *.cpp)
+ 
+# .h files
+H_SOURCE=$(wildcard *.h)
 
-app:
-	g++ passageiro.o topic.o aqui.o -o app
+# Object files
+OBJ=$(C_SOURCE:.cpp=.o)
+
+# Compiler
+CC=g++ -std=c++14
+
+# Flags for compiler
+CC_FLAGS=-c         \
+         -W         \
+         -Wall      \
+         -ansi      \
+         -pedantic
+
+#
+# Compilation and linking
+#
+
+all: $(PROJ_NAME)
+
+$(PROJ_NAME): $(OBJ)
+	$(CC) -o $@ $^
+ 
+%.o: %.c %.h
+ 
+	$(CC) -o $@ $< $(CC_FLAGS)
 
 objs:
-	g++ -std=c++14 -c passageiro.cpp
-	g++ -std=c++14 -c topic.cpp 
-	g++ -std=c++14 -c aqui.cpp
+	$(CC) -c passageiro.cpp 
+	$(CC) -c topic.cpp 
+	$(CC) -c aqui.cpp
 
 output: passageiro.o topic.o aqui.o
-	g++ -std=c++14 -o passageiro.o
-	g++ -std=c++14 -o topic.o
-	g++ -std=c++14 -o aqui.o 
+	$(CC) -o passageiro.o
+	$(CC) -o topic.o
+	$(CC) -o aqui.o 
 
-passageiro.o: passageiro.cpp
-	g++ -std=c++14 -c passageiro.cpp 
+passageiro.o: passageiro.cpp 
+	$(CC) -c passageiro.cpp
 
 topic.o: topic.cpp
-	g++ -std=c++14 -c topic.cpp 
+	$(CC) -c topic.cpp 
 
 aqui.o: aqui.cpp
-	g++ -std=c++14 -c aqui.cpp
+	$(CC) -c aqui.cpp
 
 clean:
-	rm *.o app
+	rm -rf *.o app *~
 
 
