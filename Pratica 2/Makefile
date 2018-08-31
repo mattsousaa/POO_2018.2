@@ -1,4 +1,4 @@
-# Pratica 2 de POO
+# Name of the project
 PROJ_NAME=app
 
 # .cpp files
@@ -8,10 +8,13 @@ C_SOURCE=$(wildcard *.cpp)
 H_SOURCE=$(wildcard *.h)
 
 # Object files
-OBJ=$(C_SOURCE:.cpp=.o)
+OBJ=$(subst .cpp,.o,$(subst source,objects,$(C_SOURCE)))
 
 # Compiler
 CC=g++ -std=c++14
+
+# Command used at clean target
+RM = rm -rf
 
 # Flags for compiler
 CC_FLAGS=-c         \
@@ -24,14 +27,29 @@ CC_FLAGS=-c         \
 # Compilation and linking
 #
 
-all: $(PROJ_NAME)
-
+all: objFolder $(PROJ_NAME)
+ 
 $(PROJ_NAME): $(OBJ)
-	$(CC) -o $@ $^
+	@ echo 'Building binary using GCC linker: $@'
+	$(CC) $^ -o $@
+	@ echo 'Finished building binary: $@'
+	@ echo ' '
  
-%.o: %.c %.h
+ 	./objects/%.o: ./source/%.c ./source/%.h
+	@ echo 'Building target using GCC compiler: $<'
+	$(CC) $< $(CC_FLAGS) -o $@
+	@ echo ' '
  
-	$(CC) -o $@ $< $(CC_FLAGS)
+ 	./objects/main.o: ./source/main.c $(H_SOURCE)
+	@ echo 'Building target using GCC compiler: $<'
+	$(CC) $< $(CC_FLAGS) -o $@
+	@ echo ' '
+ 
+objFolder:
+	@ mkdir -p objects
+	
+mvObjs:
+	@ mv *.o* ./objects/
 
 objs:
 	$(CC) -c passageiro.cpp 
@@ -44,7 +62,7 @@ output: passageiro.o topic.o aqui.o
 	$(CC) -o aqui.o 
 
 passageiro.o: passageiro.cpp 
-	$(CC) -c passageiro.cpp
+	$(CC) -c passageiro.cpp 
 
 topic.o: topic.cpp
 	$(CC) -c topic.cpp 
@@ -53,6 +71,9 @@ aqui.o: aqui.cpp
 	$(CC) -c aqui.cpp
 
 clean:
-	rm -rf *.o app *~
+	@ $(RM) ./objects/*.o $(PROJ_NAME) *~
+	@ rmdir ./objects*
+ 
+ 	.PHONY: all clean
 
 
