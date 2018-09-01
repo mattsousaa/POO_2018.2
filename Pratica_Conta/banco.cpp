@@ -31,7 +31,7 @@ int main(){
 
         else if(op == "init"){
 
-        	cin >> cont_init;
+            cin >> cont_init;
             //conta = Conta(read<int>());
             conta.deposito(0);
             conta.setConta(cont_init);
