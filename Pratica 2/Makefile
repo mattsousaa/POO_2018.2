@@ -1,4 +1,4 @@
-# Name of the project
+# Makefile para pratica 2 de POO
 PROJ_NAME=app
 
 # .cpp files
