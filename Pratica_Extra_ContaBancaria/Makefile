@@ -52,17 +52,17 @@ mvObjs:
 	@ mv *.o* ./objects/
 
 objs:
-	$(CC) -c banco.cpp 
+	$(CC) -c main.cpp 
 	$(CC) -c conta.cpp 
 	$(CC) -c operacao.cpp
 
-output: banco.o conta.o operacao.o
-	$(CC) -o banco.o
+output: main.o conta.o operacao.o
+	$(CC) -o main.o
 	$(CC) -o conta.o
 	$(CC) -o operacao.o 
 
-passageiro.o: banco.cpp 
-	$(CC) -c banco.cpp 
+passageiro.o: main.cpp 
+	$(CC) -c main.cpp 
 
 topic.o: conta.cpp
 	$(CC) -c conta.cpp 
