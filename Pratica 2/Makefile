@@ -30,18 +30,18 @@ CC_FLAGS=-c         \
 all: objFolder $(PROJ_NAME)
  
 $(PROJ_NAME): $(OBJ)
-	@ echo 'Building binary using GCC linker: $@'
+	@ echo 'Building binary using G++ linker: $@'
 	$(CC) $^ -o $@
 	@ echo 'Finished building binary: $@'
 	@ echo ' '
  
  	./objects/%.o: ./source/%.c ./source/%.h
-	@ echo 'Building target using GCC compiler: $<'
+	@ echo 'Building target using G++ compiler: $<'
 	$(CC) $< $(CC_FLAGS) -o $@
 	@ echo ' '
  
  	./objects/main.o: ./source/main.c $(H_SOURCE)
-	@ echo 'Building target using GCC compiler: $<'
+	@ echo 'Building target using G++ compiler: $<'
 	$(CC) $< $(CC_FLAGS) -o $@
 	@ echo ' '
  
