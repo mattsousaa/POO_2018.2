@@ -1,3 +1,6 @@
+#ifndef CONTA_H
+#define CONTA_H
+
 #include <iostream>
 #include <sstream>
 #include "operacao.h"
@@ -44,3 +47,5 @@ public:
     string getExtratoN(int n);
 
 };
+
+#endif // CONTA_H
