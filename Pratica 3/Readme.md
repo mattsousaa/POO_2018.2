@@ -2,11 +2,11 @@
 
 - **O que você fez?**
 Fiz a prática referente a atividade dos contatos. De todas os requisitos pedidos fiz todos os pontos como:
-**Definir nome**
-**Inserir telefones nos contatos**
-**Remover telefones do contato**
-**Atualizar os contatos por lote**
-**Processando números de telefone**
+- **Definir nome**
+- **Inserir telefones nos contatos**
+- **Remover telefones do contato**
+- **Atualizar os contatos por lote**
+- **Processando números de telefone**
 
 Além desses, eu fiz uma classe extra que servia como uma agenda para a inserção de diversos contatos. Chamei essa classe de Lista, que por sua vez irá possuir vários contatos com seus respectivos números, id's e labels.
 
