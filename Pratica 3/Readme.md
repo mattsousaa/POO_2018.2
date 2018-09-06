@@ -9,7 +9,7 @@ Fiz a prática referente a atividade dos contatos. De todas os requisitos pedido
 - **Atualizar os contatos por lote**
 - **Processando números de telefone**
 
-Além desses, eu fiz uma classe extra que servia como uma agenda para a inserção de diversos contatos. Chamei essa classe de Lista, que por sua vez irá possuir vários contatos com seus respectivos números, id's e labels.
+Além desses, eu fiz uma classe extra que servia como uma agenda para a inserção de diversos contatos. Chamei essa classe de Lista, que por sua vez irá possuir vários contatos com seus respectivos números, id's e labels. Também coloquei uma opção extra para excluir um contato de uma só vez.
 
 - **Com quem e como você fez?**
 Fiz essa prática sozinho. Desenvolvi a prática utilizando as aulas gravadas e também pedi ajuda na monitoria. Estava errando algumas coisas como procura e inserção de elementos nos contatos.
