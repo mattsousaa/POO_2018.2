@@ -13,7 +13,7 @@ Aprendi a reforçar conceitos de arrays de objetos e como manipulá-los em diver
 Tenho algumas dificuldades quando relacionado a utilização de ponteiros em alguns casos, quando devo passar as coisas por parâmetro ou definição. Preciso atentar mais para estes conceitos.
 
 - **Quanto tempo levou pra fazer a atividade?**
-Fiz essa atividade distribuída em algun dias. Pedi ajuda aos monitores em um dia, e no final de semana mesmo eu pude concluir a atividade. Foram 2 horas dedicadas no Sábado e 3 horas dedicadas no domingo. 
+Fiz essa atividade distribuída em alguns dias. Pedi ajuda aos monitores em um dia, e no final de semana mesmo eu pude concluir a atividade. Foram 2 horas dedicadas no Sábado e 3 horas dedicadas no domingo. 
 
 
 
