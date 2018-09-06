@@ -2,6 +2,7 @@
 
 - **O que você fez?**
 Fiz a prática referente a atividade dos contatos. De todas os requisitos pedidos fiz todos os pontos como:
+
 - **Definir nome**
 - **Inserir telefones nos contatos**
 - **Remover telefones do contato**
@@ -15,9 +16,7 @@ Fiz essa prática sozinho. Desenvolvi a prática utilizando as aulas gravadas e 
 
 - **O que aprendeu e sabe fazer?**
 Aprendi a utilizar um recurso legal, que são os templates. A única coisa que coloquei no meu código diferente do que foi passado em aula foi esse recurso. Tirei exemplos parecidos desse site para tomar como referência:
-**https://www.geeksforgeeks.org/templates-cpp/**
-
-Também aprendi algumas relações entre inserção e remoção em vetores de objetos. Estava confundindo um pouco como modificava atributos de objetos em um vetor. Aprendi a organizar essas ideias.
+**https://www.geeksforgeeks.org/templates-cpp/**. Também aprendi algumas relações entre inserção e remoção em vetores de objetos. Estava confundindo um pouco como modificava atributos de objetos em um vetor. Aprendi a organizar essas ideias.
 
 - **O que tem dificuldade ainda?**
 Me atentar ao fato de que sempre pra facilitar minha vida eu terei sempre que usar um array de objetos, e em cima desses conceitos, trabalhar o que é pedido em cada atividade.
