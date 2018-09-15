@@ -1,14 +1,7 @@
 # Relatório de POO - Prática 5 - Agiota.
 
 - **O que você fez?**
-Fiz a prática referente a atividade do Agiota. De todos os requisitos pedidos fiz todos os pontos como:
-
-**Iniciar Sistema**
-**Cadastrar Clientes**
-**Emprestar Dinheiro**
-**Mostrar cliente**
-**Receber dinheiro**
-**Matar Cliente**
+Fiz a prática referente a atividade do Agiota. De todos os requisitos pedidos fiz todos os pontos como: Iniciar Sistema, Cadastrar Clientes, Emprestar Dinheiro, Mostrar cliente, Receber dinheiro e Matar Cliente.
 
 - **Com quem e como você fez?**
 Fiz essa prática sozinho. Utilizei os códigos exemplo e todas as práticas feitas até aqui.
