@@ -1,7 +1,7 @@
 # Relatório de POO - Prática 5 - Agiota.
 
 - **O que você fez?**
-Fiz a prática referente a atividade do Agiota. De todas os requisitos pedidos fiz todos os pontos como:
+Fiz a prática referente a atividade do Agiota. De todos os requisitos pedidos fiz todos os pontos como:
 
 - **Iniciar Sistema**
 - **Cadastrar Clientes**
