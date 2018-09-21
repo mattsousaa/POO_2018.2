@@ -1,7 +1,7 @@
 # Relatório de POO - Prática 1 - Carro.
 
 - **O que você fez?**
-Fiz o código da primeira prática da disciplina de POO referente ao Calhambeque. Foi necessário ter noções a partir do código exemplo da calculadora feita em aula. 
+Fiz o código da primeira prática da disciplina de POO referente ao Calhambeque. Foi necessário ter noções a partir do código exemplo da calculadora feita em aula. Fiz todos os tópicos pedidos na prática. (Estou editando o relatório depois porque achei melhor especificar esse tópico. Fiz a prática bem antes, no início do semestre).
 
 - **Com quem e como você fez?**
 Essa primeira prática fiz sozinho. Utilizei o código exemplo da Calculadora e alguns códigos em Java que eu já possuía antes de fazer a disciplina. Como eu já tinha algumas noções de programação orientada a objetos antes, eu adicionei alguns conceitos a mais como visibilidade e métodos modificadores de acesso à prática.
