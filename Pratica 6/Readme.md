@@ -1,1 +1,16 @@
-Escrever
+# Relatório de POO - Prática 6 - Repositório (CRUD).
+
+- **O que você fez?**
+escrever...
+
+- **Com quem e como você fez?**
+escrever...
+
+- **O que aprendeu e sabe fazer?**
+escrever...
+
+- **O que tem dificuldade ainda?**
+escrever...
+
+- **Quanto tempo levou pra fazer a atividade?**
+escrever...
