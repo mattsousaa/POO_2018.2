@@ -4,7 +4,7 @@
 Como foi comentado em aula, foi deixado livre o Agiota ou os Contatos para serem feitos na forma de repositório. Escolhi os Contatos para fazer e fiz os requisitos pedidos na prática.
 
 - **Com quem e como você fez?**
-Obtive ajuda de alguns colegas para fazer o código, uma vez que senti um pouco de dificuldade na ideia do repositório. Além da ajuda dos colegas, também fui nas monitorias e assisti as aulas para fazer o código. Modifiquei a prática dos Contatos com uso dos ponteiros dessa vez. 
+Obtive ajuda de alguns colegas para fazer o código, uma vez que senti um pouco de dificuldade na ideia do repositório. Fiz com meu parceiro Allisson Jardel. Além da ajuda dos colegas, também fui nas monitorias e assisti as aulas para fazer o código. Modifiquei a prática dos Contatos com uso dos ponteiros dessa vez. 
 
 - **O que aprendeu e sabe fazer?**
 Aprendi o conceito e a implementação de repositórios. Deu pra fazer uma ligação com a disciplina de Banco de Dados quando programamos em SQL. 
