@@ -2,10 +2,17 @@
 
 Cada pasta contém um relatório em Markdown com o nome de cada prática. A estrutura das pastas é mais ou menos da seguinte forma:
 
-**├── Pratica ?**          
-**├── /inc ** 
+**├── Pratica ?**
+**|**
+**├── /inc **
+**|**
 **├── header files**
+**|**
 **── /src**
+**|**
 **├── cpp files **
+**|**
 **├── Makefile **
+**|**
 **├── Readme.md **
+**|**
