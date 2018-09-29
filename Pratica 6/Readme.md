@@ -1,4 +1,4 @@
-# Relatório de POO - Prática 6 - Repositório (CRUD).
+# Relatório de POO - Prática 6 - Contatos com Repositório (CRUD).
 
 - **O que você fez?**
 Como foi comentado em aula, foi deixado livre o Agiota ou os Contatos para serem feitos na forma de repositório. Escolhi os Contatos para fazer e fiz os requisitos pedidos na prática.
