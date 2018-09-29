@@ -16,3 +16,5 @@ Após o comando **make** é criado mais duas pastas com o executável e os objet
 |----------------|-------------------------------|-----------------------------|
 |**/bin**		        |`'app'`             |'Contém o arquivo executável'               |
 |**/obj**           |`".o"`              |"Contém os objetos"                   |
+
+Após o comando **make clean** as pastas **bin** e **obj** são excluídas com seus respectivos arquivos.
