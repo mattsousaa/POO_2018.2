@@ -9,3 +9,10 @@ Cada pasta contém um relatório em Markdown com o nome de cada prática. O repo
 |**/src**          |`".cpp"`            |"Contém os fontes"            |
 |**Makefile**          |`Makefile`|-- Arquivo para compilação |
 |**Readme.md**          |`Readme.md`|-- Relatório dos trabalhos|
+
+Após o comando **make** é criado mais duas pastas com o executável e os objetos.
+
+|                |Arquivos                          |Descrição                         |
+|----------------|-------------------------------|-----------------------------|
+|**/bin**		        |`'app'`             |'Contém o arquivo executável'               |
+|**/obj**           |`".o"`              |"Contém os objetos"                   |
