@@ -8,11 +8,7 @@ Fiz essa prática sozinho. Acho que das práticas que tivemos até agora essa fo
 - **O que aprendeu e sabe fazer?**
 Aprendi a reforçar o conceito de templates já que eu já vinha de algumas práticas utilizando este tipo de recurso e também aprendi o que o erro maldito **No match for 'operator<<' in std::cout [duplicate]** queria dizer. Foi um erro que tava dando no meu código mas eu simplesmente não entendia o porquê daquele negócio tá dando errado. Consultei esse tópico no stack overflow para resolver meu problema: **https://stackoverflow.com/questions/15449508/no-match-for-operator-in-stdcout**. Nesse tópico tirei minhas dúvidas sobre esse erro que tava dando, era só fazer:
 
-**std::ostream& operator<< (std::ostream &str, const PersonInfo &p)
-{
-  str << "Name: " << p.name << "\nAge: " << p.age << '\n';
-  return str;
-}**
+**std::ostream& operator<< (std::ostream &str, const PersonInfo &p)**
 
 Não sei porque a gente passa a classe como **const**, mas deu certo. =) 
 
