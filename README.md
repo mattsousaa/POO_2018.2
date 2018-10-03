@@ -18,3 +18,6 @@ Após o comando **make** é criado mais duas pastas com o executável e os objet
 |**/obj**           |`".o"`              |"Contém os objetos"                   |
 
 Após o comando **make clean** as pastas **bin** e **obj** são excluídas com seus respectivos arquivos.
+
+>"When you change the way you look at things, the things you look at change."</br>
+>Max Planck, Quantum theorist and Nobel Prize Winner
