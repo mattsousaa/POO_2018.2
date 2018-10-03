@@ -16,4 +16,4 @@ Não sei porque a gente passa a classe como **const**, mas deu certo. =)
 De tanto fazer essa prática eu aprendi a reforçar todas as minhas dificuldades até aqui. Ainda preciso tomar cuidado quando lidamos com templates nas classes. 
 
 - **Quanto tempo levou pra fazer a atividade?**
-Acredito que levei um final de semana pra fazer. Foi bastante complicado entender os conceitos de repositório mas felizmente que deu tudo certo no final. Foram muitas (literalmente muitas) horas dedicadas para a execução dessa prática. Acho que foi a mais difícil até agora.
+Acredito que levei um final de semana pra fazer. Foi bastante complicado entender os conceitos de repositório mas felizmente deu tudo certo no final. Foram muitas (literalmente muitas) horas dedicadas para a execução dessa prática. Acho que foi a mais difícil até agora.
