@@ -17,3 +17,5 @@ De tanto fazer essa prática eu aprendi a reforçar todas as minhas dificuldades
 
 - **Quanto tempo levou pra fazer a atividade?**
 Acredito que levei um final de semana pra fazer. Foi bastante complicado entender os conceitos de repositório mas felizmente deu tudo certo no final. Foram muitas (literalmente muitas) horas dedicadas para a execução dessa prática. Acho que foi a mais difícil até agora.
+
+Estou colocando o arquivo da prática modulado algumas semanas depois da atividade já feita, já que tive preguiça de modular o código da prática 7 na semana da entrega. Decidi fazer isso para não quebrar a ideia das pastas (src e inc) do repositório. 
