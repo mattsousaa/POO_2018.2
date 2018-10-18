@@ -1,1 +1,16 @@
-Fazer relatorio e o codigo
+# Relatório de POO - Prática 8 - Serviço de Anotações
+
+- **O que você fez?**
+escrever...
+
+- **Com quem e como você fez?**
+escrever...
+
+- **O que aprendeu e sabe fazer?**
+escrever...
+
+- **O que tem dificuldade ainda?**
+escrever...
+
+- **Quanto tempo levou pra fazer a atividade?**
+escrever...
