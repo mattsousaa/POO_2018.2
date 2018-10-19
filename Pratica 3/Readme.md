@@ -24,5 +24,5 @@ Me atentar ao fato de que sempre pra facilitar minha vida eu terei sempre que us
 - **Quanto tempo levou pra fazer a atividade?**
 Essa atividade na verdade foi feita por partes. Tirei um horário de almoço pra tirar dúvidas com a monitoria, outra parte da noite pra assistir as aulas e outra parte para estudar sobre templates, no dia seguinte. Foi mais ou menos uns 3 dias, juntando tudo, com mais ou menos 2 a 3 horas dedicadas para o desenvolvimento da atividade.
 
-
+Estou atualizando a mesma prática em partes para seguir a mesma lógica do repositório. Não coloquei modificações, apenas modulei o código todo. 
 
