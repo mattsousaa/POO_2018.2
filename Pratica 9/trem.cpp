@@ -72,19 +72,6 @@ public:
     /* virtual bool desembar(string idPass) = 0;
     virtual bool exists(string idPass) = 0; */
 
-    virtual bool desembarcar(Emb *emb, string idPass){
-        if(Pass * pass = dynamic_cast<Pass*>(emb)){
-            for(size_t i = 0; i < passageiros.size(); i++){
-                if(passageiros[i] != nullptr && pass->id == idPass){
-                    delete passageiros[i];
-                    passageiros[i] = nullptr;
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
     virtual string toString(){
         stringstream ss;
         ss << "[ ";
@@ -163,9 +150,7 @@ public:
                 delete pass;
         }else if(op == "show"){
             cout << trem.toString() << endl;
-        } else if(op == "desp"){
-            cout << trem.desembarcar(12) << endl; 
-        } else
+        }else
             cout << "fail: comando invalido" << endl;
     }
 
@@ -198,5 +183,5 @@ embp rufus
 embp ioda
 embp grievous
 embp tim_maia
-embp zeca
+embp goku
 */
