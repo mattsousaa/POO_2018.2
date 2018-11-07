@@ -1,16 +1,16 @@
 # Relatório de POO - Prática 12- Twitter
 
 - **O que você fez?**
-Escrever...
+Fiz a prática do Twitter com todos os requisitos pedidos na tarefa.
 
 - **Com quem e como você fez?**
-Escrever...
+Fiz a prática sozinho e necessitei da ajuda da monitoria em alguns pontos. 
 
 - **O que aprendeu e sabe fazer?**
-Escrever...
+Aprendi a reforçar todos os conceitos que aprendi ao longo da disciplina.
 
 - **O que tem dificuldade ainda?**
-Escrever...
+Minhas dificuldades em relação a esta tarefa foram poucas, acredito mesmo que só na parte de polimorfismo.
 
 - **Quanto tempo levou pra fazer a atividade?**
-Escrever...
+Dividi dois dias do final de semana para a realização da tarefa. 2 horas no sábado e 3 horas no domingo para o término. As dúvidas que tirei na monitoria ajudaram bastante em alguns tópicos.
