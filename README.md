@@ -244,7 +244,7 @@ Tenho dificuldade ainda com o conceito de polimorfismo, mas acredito que com as 
 Levei cerca de 3 h para a realização da tarefa.
 
 
-# Relatório de POO - Prática 12- Twitter
+# Relatório de POO - Prática 12 - Twitter
 
 - **O que você fez?**
 Fiz a prática do Twitter com todos os requisitos pedidos na tarefa.
@@ -260,6 +260,23 @@ Minhas dificuldades em relação a esta tarefa foram poucas, acredito mesmo que 
 
 - **Quanto tempo levou pra fazer a atividade?**
 Dividi dois dias do final de semana para a realização da tarefa. 2 horas no sábado e 3 horas no domingo para o término. As dúvidas que tirei na monitoria ajudaram bastante em alguns tópicos.
+
+# Relatório de POO - Prática 13 - Hospital
+
+- **O que você fez?**
+Fiz a prática do Hospital. Não fiz a parte que os médicos mandam mensagens para seus pacientes (até fiz, mas está dando erro).
+
+- **Com quem e como você fez?**
+Fiz a prática sozinho, mas necessitei de ajuda da monitoria em maior parte. 
+
+- **O que aprendeu e sabe fazer?**
+Aprendi a reforçar um pouco mais sobre uso dos templates, já que havia me esquecido um pouco e aprendi sobre a questão da associação, já que era um conceito de ampla dificuldade minha.
+
+- **O que tem dificuldade ainda?**
+Tive dificuldades de vincular pacientes e médicos.
+
+- **Quanto tempo levou pra fazer a atividade?**
+Levei uns 4 dias para a realização da atividade.
 
 
 # Relatório de POO - Prática Extra - Conta Bancária.
