@@ -264,7 +264,7 @@ Dividi dois dias do final de semana para a realização da tarefa. 2 horas no s�
 # Relatório de POO - Prática 13 - Hospital
 
 - **O que você fez?**
-Fiz a prática do Hospital. Não fiz a parte que os médicos mandam mensagens para seus pacientes (até fiz, mas está dando erro).
+Fiz a prática do Hospital. Não fiz a parte que os médicos mandam mensagens para seus pacientes (até fiz, mas está dando erro). Usei grande parte do código fornecido pelo professor em aula.
 
 - **Com quem e como você fez?**
 Fiz a prática sozinho, mas necessitei de ajuda da monitoria em maior parte. 
