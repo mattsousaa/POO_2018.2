@@ -26,7 +26,7 @@ string Doctor::getPats(size_t i = 0){
 }
 
 string Doctor::toString(){
-    return "Doc: " + this->name + ":" + this->spec + "\tPats: [" + getPats() + "]" ;
+    return "Médicos: " + this->name + ":" + this->spec + "\tPacientes: [" + getPats() + "]" ;
 }
 
 void Doctor::sendMsg(string para_fulano, string text){
