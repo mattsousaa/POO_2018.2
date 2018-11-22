@@ -127,6 +127,8 @@ public:
 
         if(it != contatos.end()){
             contatos.at(_nome).setFavorito(true);
+            favoritos.insert(make_pair(_nome, &contatos.at(_nome)));
+
         } else{
             cout << "Usuário inexistente" << endl;
         }
