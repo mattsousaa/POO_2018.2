@@ -151,6 +151,7 @@ public:
 
         if(it != contatos.end()){
             contatos.at(_nome).setFavorito(false);
+            favoritos.erase(_nome);
         } else{
             cout << "Usuário inexistente" << endl;
         }
