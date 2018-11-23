@@ -119,6 +119,13 @@ public:
         return saida;
     }
 
+/*******************************************************************************************/
+
+/* Implementação das funções pedidas (Parte 1)
+(1) - Favoritar
+(2) - Desfavoritar
+(3) - Mostrar favoritos */
+
     bool favoritar(string _nome){
 
         Contato elemento;
@@ -130,8 +137,9 @@ public:
             favoritos.insert(make_pair(_nome, &contatos.at(_nome)));
 
         } else{
-            cout << "Usuário inexistente" << endl;
+            cout << "Usuario inexistente" << endl;
         }
+
 
         /*
         if(elemento.getName() == _nome){
@@ -139,14 +147,13 @@ public:
             favoritos.push_back(elemento);
             return true;
         }*/
-        //}
 
         return true;
     }
 
     bool desfavoritar(string _nome){
 
-        Contato elemento;
+        //Contato elemento;
         auto it = contatos.find(_nome);
 
         if(it != contatos.end()){
@@ -169,6 +176,8 @@ public:
 
         cout << ss.str();
     }
+
+/*******************************************************************************************/
 
 };
 
@@ -226,6 +235,12 @@ public:
             string name;
             ss >> name;
             agenda.showFavoritos();
+            cout << "done";
+        }
+        else if(op == "desfav"){
+            string name;
+            ss >> name;
+            agenda.desfavoritar(name);
             cout << "done";
         }
 
