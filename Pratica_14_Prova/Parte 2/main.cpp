@@ -5,10 +5,67 @@
 
 using namespace std;
 
+class Entry {
+    bool favorited;
+public:
+    virtual string getId() = 0;
+    virtual void setFavorited(bool value) = 0;
+    virtual bool isFavorited() = 0;
+    virtual string toString() = 0;
+};
+
+class Note : public Entry {
+    string id;
+    bool favorited = false;
+    vector<string> itens;
+
+public:
+
+    Note(string id = ""){
+        this->id = id;
+    }
+
+    string getId(){
+        return id;
+    }
+
+    void addItem(string item){
+        itens.push_back(item);
+    }
+
+    void rmItem(int id){
+        itens.erase(itens.begin()+id);
+    }
+
+    string toString(){
+        int i = 0;
+        string output = id+" N [ ";
+        for(auto item : itens){
+            output += to_string(i++) +": "+item + " ";
+        }
+        output +="]";
+        if(favorited)
+            output += " - Favorito: true";
+        else
+            output += " - Favorito: false";
+        return output;
+    }
+
+    void setFavorited(bool fv){
+        favorited = fv;
+    }
+
+    bool isFavorited(){
+        return favorited;
+    }
+
+};
+
 class Fone {
 public:
     string id;
     string number;
+
 
     Fone(string id = "", string number = ""){
         this->id = id;
@@ -24,17 +81,24 @@ public:
     }
 };
 
-class Contato {
+class Contato : public Entry{
     string name;
+    bool favorited = false;
     vector<Fone> fones;
-    bool isFavorited{false};
-
 public:
+
+    void setFavorited(bool fv){
+        favorited = fv;
+    }
+    bool isFavorited(){
+        return favorited;
+    }
+
     Contato(string name = ""){
         this->name = name;
     }
 
-    string getName(){
+    string getId(){
         return name;
     }
 
@@ -44,10 +108,10 @@ public:
         fones.push_back(fone);
     }
 
-    void rmFone(size_t indice){
-        if(indice < 0 || indice >= fones.size())
-            throw string("indice " + to_string(indice) + " nao existe");
-        fones.erase(fones.begin() + indice);
+    void rmFone(size_t id){
+        if(id < 0 || id >= fones.size())
+            throw string("id " + to_string(id) + " nao existe");
+        fones.erase(fones.begin() + id);
     }
 
     vector<Fone> getFones(){
@@ -58,132 +122,113 @@ public:
     }
 
     string toString(){
-        string saida = this->name + " C ";
+        string output = this->name + " C ";
         int i = 0;
         for(auto fone : getFones())
-            saida += "[" + to_string(i++) + ":" + fone.id + ":" + fone.number + "]";
-        return saida;
-    }
+            output += "[" + to_string(i++) + ":" + fone.id + ":" + fone.number + "]";
 
-    void setFavorito(bool _fav){
-        isFavorited = _fav;
+            if(favorited){
+                    output+=" - Favorito: true";
+            }else{
+                    output+=" - Favorito: false";
+            }
+        return output;
     }
-
-    bool getFavorito(){
-        return isFavorited;
-    }
-
 };
 
+
 class Agenda {
-    map<string, Contato> contatos;
-    map<string, Contato*> favoritos;
 
 public:
-    void addContato(Contato cont){
-        string name = cont.getName();
-        if(contatos.count(name) == 1)
-            throw string("contato " + name + " ja existe");
-        contatos[name] = cont;
+    map<string, Entry*> m_entries;
+    map<string, Entry*> m_favorities;
+
+    void addEntry(Entry * entry){
+        m_entries.insert(make_pair(entry->getId(), entry));
     }
 
-    void rmContato(string name) {
-        contatos.erase(name);
+    void rmEntry(string id){
+        m_entries.erase(id);
     }
 
-    Contato * getContato(string name){
-        if(contatos.count(name))
-            return &contatos[name];
-        throw string("  contato " + name + " nao existe");
+    void favorite(string idEntry){
+        auto it =  m_entries.find(idEntry);
+        if(it != m_entries.end()){
+            m_entries.at(idEntry)->setFavorited(true);
+            m_favorities.insert(make_pair(idEntry, m_entries.at(idEntry)));
+        }else{
+            cout << "fail: Entrada inexistente." << endl;
+        }
     }
 
-    vector<Contato> getContatos(){
-        vector<Contato> resp;
-        for(auto& par : contatos)
-            resp.push_back(par.second);
-        return resp;
+    void unfavorite(string idEntry){
+
+        auto it =  m_entries.find(idEntry);
+        if(it != m_entries.end()){
+            m_entries.at(idEntry)->setFavorited(false);
+            m_favorities.erase(idEntry);
+        }else{
+            cout << "fail: Entrada inexistente." << endl;
+        }
     }
 
-    vector<Contato> search(string pattern){
-        vector<Contato> resp;
-        for(auto& par : contatos)
-            if(par.second.toString().find(pattern) != string::npos)
-                resp.push_back(par.second);
-        return resp;
+    vector<Entry*> getFavorited(){
+        vector<Entry*> favoritos;
+        for(auto it : m_favorities){
+            favoritos.push_back(it.second);
+        }
+        return favoritos;
+    }
+
+    Entry * getEntry(string id){
+        auto it =  m_entries.find(id);
+        if(it != m_entries.end()){
+            return m_entries.at(id);
+        }else{
+            cout << "fail: Entrada inexistente." << endl;
+        }
+    }
+
+    vector<Entry*> getEntries(){
+        vector<Entry*> entradas;
+        for(auto it : m_entries){
+            entradas.push_back(it.second);
+        }
+        return entradas;
     }
 
     string toString(){
-        string saida = "";
-        for(auto contato : getContatos())
-            saida += contato.toString() + "\n";
-        return saida;
-    }
-
-/*******************************************************************************************/
-
-/* Implementação das funções pedidas (Parte 1)
-(1) - Favoritar
-(2) - Desfavoritar
-(3) - Mostrar favoritos */
-
-    bool favoritar(string _nome){
-
-        Contato elemento;
-        //for(Contato& elemento : contatos){
-        auto it = contatos.find(_nome);
-
-        if(it != contatos.end()){
-            contatos.at(_nome).setFavorito(true);
-            favoritos.insert(make_pair(_nome, &contatos.at(_nome)));
-
-        } else{
-            cout << "Usuario inexistente" << endl;
-        }
-
-
-        /*
-        if(elemento.getName() == _nome){
-            elemento.setFavorito(true);
-            favoritos.push_back(elemento);
-            return true;
-        }*/
-
-        return true;
-    }
-
-    bool desfavoritar(string _nome){
-
-        //Contato elemento;
-        auto it = contatos.find(_nome);
-
-        if(it != contatos.end()){
-            contatos.at(_nome).setFavorito(false);
-            favoritos.erase(_nome);
-        } else{
-            cout << "Usuário inexistente" << endl;
-        }
-
-        return false;
-    }
-
-    void showFavoritos(){
         stringstream ss;
-        for(auto it : contatos){
-            if(it.second.getFavorito()){
-                ss << "@" <<it.second.toString() << endl;
-            }
+        for(auto it : m_entries){
+            ss << it.second->toString()<<endl;
         }
+        return ss.str();
+    }
+};
 
-        cout << ss.str();
+class AgendaMaster : public Agenda{
+public:
+    
+    Contato * getContato(string id){
+        if(Contato *contato = dynamic_cast <Contato*> (getEntry(id))){
+            return contato;
+        }
+        return nullptr;
     }
 
-/*******************************************************************************************/
+    Note * getNote(string id){
+        if(Note *note = dynamic_cast <Note*> (getEntry(id))){
+            return note;
+        }
+        return nullptr;
+    }
+
 
 };
 
 class Controller {
 
-    Agenda agenda;
+    AgendaMaster agenda;
 public:
 
     void shell(string line){
@@ -194,78 +239,100 @@ public:
         if(op == "addContato"){
             string name, id_number;
             ss >> name;
-            Contato cont(name);
+            string id, fone;
+
+            agenda.addEntry(new Contato(name));
             while(ss >> id_number){
-                string id, fone;
+
                 stringstream ssfone(id_number);
                 getline(ssfone, id, ':');
                 ssfone >> fone;
-                cont.addFone(Fone(id, fone));
             }
-            agenda.addContato(cont);
-        }
-        else if(op == "rmFone"){
-            string name;
-            int indice;
-            ss >> name >> indice;
-            agenda.getContato(name)->rmFone(indice);
-        }
-        else if(op == "rmContato"){
+
+            Contato *contato = agenda.getContato(name);
+            contato->addFone(Fone(id, fone));
+
+        }else if(op == "addNote"){
             string name;
             ss >> name;
-            agenda.rmContato(name);
-        }
-        else if(op == "agenda"){
+            agenda.addEntry(new Note(name));
+
+        }else if(op == "rmNote"){
+            string name;
+            ss >> name;
+            agenda.rmEntry(name);
+
+        }else if(op == "addFone"){
+
+            string name, id_number;
+            ss >> name;
+            string id, fone;
+
+            while(ss >> id_number){
+                stringstream ssfone(id_number);
+                getline(ssfone, id, ':');
+                ssfone >> fone;
+            }
+
+            Contato *contato = agenda.getContato(name);
+            contato->addFone(Fone(id, fone));
+
+        }else if(op == "rmFone"){
+            string name;
+            int id;
+            ss >> name >> id;
+            Contato *contato = agenda.getContato(name);
+            contato->rmFone(id);
+
+        }else if(op == "addItem"){
+            string name, anotacao="", comando;
+            ss >> name;
+
+             while(ss >> comando){
+                anotacao+=comando + " ";
+            }
+
+            Note *note = agenda.getNote(name);
+            note->addItem(anotacao);
+
+        }else if(op == "rmItem"){
+            string name;
+            int id;
+            ss >> name;
+            ss >> id;
+
+            Note *note = agenda.getNote(name);
+            note->rmItem(id);
+
+        }else if(op == "rmContato"){
+            string name;
+            ss >> name;
+            agenda.rmEntry(name);
+
+        }else if(op == "agenda"){
             cout << agenda.toString();
-        }
-        else if(op == "search"){
+
+        }else if(op == "search"){
             string pattern;
             ss >> pattern;
-            auto resp = agenda.search(pattern);
-            for(auto contato : resp)
-                cout << contato.toString() << endl;
-        }
-        else if(op == "fav"){
-            string name;
-            ss >> name;
-            agenda.favoritar(name);
-            cout << "done";
-        }
-        else if(op == "showFav"){
-            string name;
-            ss >> name;
-            agenda.showFavoritos();
-            cout << "done";
-        }
-        else if(op == "desfav"){
-            string name;
-            ss >> name;
-            agenda.desfavoritar(name);
-            cout << "done";
-        }
+            auto it = agenda.getEntry(pattern);
+            cout << it->toString() << endl;
 
-        /*
-        if(op == "fav"){
+        }else if(op == "fav"){
             string name;
             ss >> name;
-            agenda.favoritar(name);
-            return "done";
-        }
-        if(op == "desfav"){
+            agenda.favorite(name);
+
+        }else if(op == "desfav"){
             string name;
             ss >> name;
-            agenda.desfavoritar(name);
-            return "done";
-        }
-        if(op == "showFav"){
-            string saida = "";
-            auto favs = agenda.getFavoritos();
-            for(auto contato : favs)
-                saida += contato.toString() + "\n";
-            return saida;
-        }
-        */
-        else
+            agenda.unfavorite(name);
+
+        }else if(op == "showFav"){
+            for(auto *it : agenda.getFavorited()){
+                cout << it->toString() << endl;
+            }
+        }else
             cout << "comando invalido" << endl;
     }
 
@@ -286,8 +353,7 @@ public:
     }
 };
 
-int main()
-{
+int main(){
     Controller controller;
     controller.exec();
     return 0;
