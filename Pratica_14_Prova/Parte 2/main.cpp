@@ -6,7 +6,7 @@
 using namespace std;
 
 class Entry {
-    bool favorited;
+    bool favorited{0};
 public:
     virtual string getId() = 0;
     virtual void setFavorited(bool value) = 0;
